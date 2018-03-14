@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Siam Shop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 1010px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      /*background-color: #f1f1f1;*/
+      background-color: #555;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+<!--    <div class="navbar-header"> -->
+  <link rel="stylesheet" type="text/css" href="/Users/kungen/Documents/Programmering/Siam Shop/Controller/stylecheet.css">
+  <div id="Startsida" class="tabcontent">
+      <h1>Siam Shop</h1>
+      <p>Asiatiska livsmedel</p>
+    </div>
+
+    <div id="Varor" class="tabcontent">
+      <h1>Siam Shop</h1>
+      <p>Varor från Thailand, Japan, Kina, Korea, Indien</p>
+    </div>
+
+    <div id="Kontakt" class="tabcontent">
+      <h1>Siam Shop</h1>
+      <p>Centralt beläget i innerstan</p>
+    </div>
+
+    <div id="Recept" class="tabcontent">
+      <h1>Siam Shop</h1>
+      <p>Var med om nya smakupplevelser</p>
+    </div>
+
+    <button class="tablink" onclick="openCity('Startsida', this, 'purple')"><a href="/Users/kungen/Documents/Programmering/Siam Shop/index.html"> Startsida</a></button>
+    <button class="tablink" onclick="openCity('Varor', this, 'purple')"><a href="/Users/kungen/Documents/Programmering/Siam Shop/View/varor.html"> Varor</a></button>
+    <button class="tablink" onclick="openCity('Kontakt', this, 'purple')" id="defaultOpen">Kontakt</button>
+    <button class="tablink" onclick="openCity('Recept', this, 'purple')">Recept</button>
+
+    <script src="/Users/kungen/Documents/Programmering/Siam Shop/Model/headertab.js"></script>
+</nav>
+
+<div class="container-fluid text-left">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <h3>Kontakt</h3>
+        <p>
+          <b>Siam Shop</b> <br/>
+          Storgatan 6 <br/>
+          581 03 Linköping <br/>
+          <br/>
+          <b>Tel:</b> 013- 12 12 13 <br/>
+          <b>Fax:</b> 013- 12 12 13 <br/> <br/>
+          <a href="http://facebook.com/siamshoplinkoping"> <b>Facebook</b></a><br/>
+          <br/>
+          <b>Öppetider</b> <br/>
+          mån- fre 10.00-18.00 <br/>
+          lör          10.00-15.00 <br/>
+          sön         11.00-15.00
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-8 text-left">
+      <!-- <h1>Välkommen till Siam Shop!</h1> -->
+        <p>
+          <div class="container1">
+              <img src="https://images.pexels.com/photos/590478/pexels-photo-590478.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb"
+               alt="Norway" style="width:100%;">
+              <div class="text-block2">
+                <p>
+                  <div class="table1">
+                    <table style="width: 100%">
+                      <tr>
+                        <th><h1>Kontakt    </h1></th>
+                        <th><h1>Öppettider    </h1></th>
+                        <th><h1>E-post    </h1></th>
+                      </tr>
+                      <tr>
+                        <td><b>Siam Shop</b></td>
+                        <td><b>Mån - Fre:</b> 10.00 - 18.00</td>
+                        <td>Kontaktformulär nedan</td>
+                      </tr>
+                      <tr>
+                        <td>Storgatan 6</td>
+                        <td><b>Lör:</b> 10.00 - 15.00</td>
+                      </tr>
+                      <tr>
+                        <td>581 03 Linköping</td>
+                        <td><b>Sön:</b> 11.00 - 15.00</td>
+                      </tr>
+                      <tr></tr>
+                      <tr>
+                        <td><b>Tel:</b> 013-12 12 13</td>
+                      </tr>
+                      <tr>
+                        <td><b>Fax:</b> 013-12 12 13</td>
+                      </tr>
+                    </table>
+                  </div>
+                </p>
+              </div>
+            </div>
+
+            <div class="container">
+              <form action="action_page.php">
+
+                <label for="fname"></label>
+                <input type="text" id="fname" name="firstname" placeholder="Ditt namn...">
+
+                <label for="lname"></label>
+                <input type="text" id="lname" name="lastname" placeholder="Din e-post">
+
+                <label for="country"></label>
+                <input type="text" id="lsubject" name="subject" placeholder="Ange ämne">
+
+                <label for="subject"></label>
+                <textarea id="subject" name="subject" placeholder="Skriv ditt meddelande här" style="height:100px"></textarea>
+                <br/>
+                <input type="submit" value="Skicka">
+
+              </form>
+            </div>
+
+          </p>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p><b>Senaste Receptet</b></p>
+        <p><img src="https://www.delishknowledge.com/wp-content/uploads/Spring-Thai-Green-Curry4.jpg" height="200"</p>
+        <p>Thai Green Curry</p>
+      </div>
+      <div class="well">
+        <p><b>Nyheter</b></p>
+        <p><b>3/3</b><br/>
+          Idag har vi fått in färska grönsaker från Thailand
+        </p>
+        <p><b>22/3</b><br/>
+          Kom in för smakprov! Vi bjuder på pad thai idag mellan 12-17.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Siam Shop - Storgatan 6 - 581 03 Linköping - Tel: 013 12 12 13 - E-post: info@siamshop.biz</p>
+  <p>Facebook: <a href="http://facebook.com/siamshoplinkoping" Siam Shop Linköping> Siam Shop Linköping</a> </p>
+  <p><small>Hemsida designad av Betina Andersson</small></p>
+</footer>
+
+</body>
+</html>
