@@ -15,12 +15,30 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override')
 var mustacheExpress = require('mustache-express');
 
-var router = require('./routes/router');
+var index = require('./routes/index');
+var siamshop = require('./routes/siamshop');
 
 var app = express();
 
+
+app.use(cookieParser());
+app.use(session({
+    secret: 'shhhhhhhhhh', name: 'todolistcookie',
+    //store: sessionStore, // connect-mongo session store
+    //proxy: true,
+    resave: true,
+    saveUninitialized: true
+}));
+
+
+// Make it possible to access a session object in Mustache templates
+app.use(function(req, res, next) {
+    res.locals.session = req.session;
+    next();
+});
+
 // Used for static resources (must have first arg, to make path absolute)
-//app.use('/public', express.static(path.join(__dirname, '/public')));
+app.use('/public', express.static(path.join(__dirname, '/public')));
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -38,7 +56,8 @@ app.listen(3000, function() {
 });
 
 // The routes and routers
-app.use('/', router);
+app.use('/', index);
+app.use('/siamshop', siamshop);
 
 // Catch 404 and forward to error handler
 app.use(function(err, req, res, next) {

@@ -35,11 +35,11 @@
   }
 
   /* Style each tab content individually */
-  #Startsida {background-image: url("/Users/kungen/Documents/Programmering/Siam Shop/pics/asialife.png");}
+  #Startsida {background-image: url(".././pics/asialife.png");}
   /*#Affarside {background-image: url("/Users/kungen/Documents/Programmering/Siam Shop/pics/grass.png");}*/
-  #Varor {background-image: url("/Users/kungen/Documents/Programmering/Siam Shop/pics/hanuman.png");}
-  #Kontakt {background-image: url("/Users/kungen/Documents/Programmering/Siam Shop/pics/food.jpeg");}
-  #Recept {background-image: url("/Users/kungen/Documents/Programmering/Siam Shop/pics/thaimat.png");}
+  #Varor {background-image: url(".././pics/hanuman.png");}
+  #Kontakt {background-image: url(".././pics/food.jpeg");}
+  #Recept {background-image: url(".././pics/thaimat.png");}
 
   /* Container holding the image and the text */
   .container1 {
