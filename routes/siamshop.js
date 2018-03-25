@@ -16,12 +16,13 @@ router.get('/', function(req, res, next) {
     res.render('siamshop');
 });
 
-router.get('/siamshop/kontakt', function(req, res, next) {
-  res.redirect('/kontakt');
+router.get('/kontakt', function(req, res, next) {
+    console.log("Get kontakt");
+    res.render('kontakt');
 });
 
 router.get('/varor', function(req, res, next) {
-  res.redirect('/varor');
+  res.render('varor');
 })
 
 
